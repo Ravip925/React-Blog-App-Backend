@@ -1,9 +1,8 @@
-const express = require("express");
+const routerData = require("express").Router();
 
-const serverData = require("../Controllers/Data");
+const serverData = require("../Controllers/Data"); //importing data
 
-const routerData = express.Router();
 
-routerData.route("/home").get(serverData.apidatacontroller);
+routerData.route("/home").get(serverData.apidatacontroller); //created home route
 
 module.exports = routerData;
